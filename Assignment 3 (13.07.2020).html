@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Assignment 3</title>
+    </head>
+    <body>
+        <p><h5>Get Date</h5></p>
+        <p id="one" 
+       style="font-size: 15px;  
+              font-weight: bold;"></p> 
+
+        <button onclick="gfg_Run()"> Get Date </button> 
+        <p id="two" 
+       style="color :black;  
+              font-size: 20px;  
+              font-weight: bold;"> </p>
+        <script>
+            var a = document.getElementById("one");
+            var b = document.getElementById("two");
+            var today = new Date();
+            a.innerHTML = today;
+            var dd = today.getDate();
+            var mm = today.getMonth() +1;
+            var yyyy = today.getFullYear();
+            if(dd<10)
+            {
+                dd = '0'+dd;
+            }
+            if(mm<10){
+                dd = '0'+mm;
+            }
+            var today = dd + '/' + mm + '/' + yyyy;
+            function gfg_Run() { 
+                b.innerHTML = today; 
+        } 
+        </script>
+    </body>
+</html>
